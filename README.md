@@ -1,0 +1,2 @@
+# infinity
+scripts da infinity
