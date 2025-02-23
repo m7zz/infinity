@@ -1,4 +1,5 @@
-Curso de [Programação full stacker - Infinity]
+- Curso de [Programação full stacker - Infinity] 
+
 Bem-vindo ao repositório do Curso de [Programação full stacker]! Aqui você encontrará todo o material necessário para acompanhar as aulas e praticar os conceitos ensinados.
 
 📚 Conteúdo
