@@ -1,33 +1,34 @@
+soma = 0
+qtd_numeros = 0
+menor = float('inf')
+maior = float('-inf')
 
-numeros = []
+
 while True:
-   
     try:
-        numero = float(input("Digite um número: "))
-        numeros.append(numero)
-        
-        continuar = input("Deseja continuar? [S/N]: ").upper()
-       
-        if continuar != 'S':
-            break
-            
-    except ValueError:
-        print("Por favor, digite um número válido!")
-        continue
+        numero = float(input(f'Digite o {qtd_numeros + 1}º numero: '))
 
-if len(numeros) > 0:
-    
-    quantidade = len(numeros)
-    menor = min(numeros)
-    maior = max(numeros)
-    soma = sum(numeros)
-    media = soma / quantidade
-    
-    print("\nResultados:")
-    print(f"Quantidade de números inseridos: {quantidade}")
-    print(f"Menor número: {menor}")
-    print(f"Maior número: {maior}")
-    print(f"Soma dos números: {soma}")
-    print(f"Média dos números: {media:.2f}")
-else:
-    print("\nNenhum número foi inserido!")
+        soma += numero
+        qtd_numeros += 1
+
+        if numero > maior:
+            maior = numero
+
+        if numero < menor:
+            menor = numero
+
+        resp = input('Deseja continuar? [S/N] ')
+        if resp.upper() == 'N': break
+    except ValueError:
+        print('Digite um número válido')   
+
+
+media = soma / qtd_numeros
+
+print('-' * 30)
+print(f'Quantidade de Numeros: {qtd_numeros}')
+print(f'Maior Numero: {maior}')
+print(f'Menor Numero: {menor}')
+print(f'Soma dos Numeros: {soma}')
+print(f'Média dos Numeros: {media}')
+
