@@ -8,6 +8,5 @@ for n in range (6):
 
 print('numeros:')
 print(f'- {numeros}')   
-
 soma = sum(numeros)
 print(f'A soma dos números é {soma}')
