@@ -1,0 +1,11 @@
+Resumo:
+
+   - .get(): Acessa de forma segura, sem erro.
+
+   - []: Acessa diretamente, mas dá erro se não existir.
+
+   - .update(): Adiciona ou atualiza vários itens ao mesmo tempo.
+
+   - .pop(): Remove um item e retorna o valor.
+
+   - .clear(): Remove todos os itens.

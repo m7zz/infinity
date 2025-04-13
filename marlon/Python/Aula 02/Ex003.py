@@ -18,7 +18,7 @@ def calculadora():
             continue
         else:
 
-            print(f"O resultado da divisão é: {resultado}")
+            print(f"O resultado da divisão é: {resultado:.2f}")
             break
 
 calculadora()

@@ -28,7 +28,7 @@ def dados_aluno():
     return aluno
 
 def mostrar_dados_aluno(aluno):
-    print("\nInformações do Aluno:")
+    print("\nInformações do Aluno:")                
     print(f"Nome: {aluno['nome']}")
     print(f"Notas: {aluno['notas']}")
     print(f"Média: {aluno['media']:.2f}")
