@@ -1,2 +1,0 @@
-Ex01. Faça um programa que peça umm numero e diga se esse número é primo ou não
-OBS: Lembrando que um número primo é divisivel somente por 1 e por ele mesmo
