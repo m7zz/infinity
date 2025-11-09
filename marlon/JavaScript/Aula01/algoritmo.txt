@@ -1,0 +1,14 @@
+Ex : Escrevam um algoritmo no bolco de notas, para fazer um café com um coador.
+
+1. pegar o coador
+2. pegar o cafe
+3. joga o cafe no coador
+4. pega a agua
+5. coloca a agua em uma panela por exemplo
+6. coloca a panela de agua no fogao e liga o fogo
+7. esquenta a agua
+8. espera a agua ferver
+9. apaga o fogo 
+10. pega a panela ou o recipiente e joga no coador
+11. coloca algo em baixo do coador e espera 
+12. pronto (eu acho, nao sei fazer cafe rs)

@@ -1,0 +1,7 @@
+Ex01. Escrevam um algoritmo no bloco de notas, para fazer um café com um coador.
+
+Ex02. Faça um programa que peça a idade e mostre na tela uma mensagem "Eu tenho {idade} anos. A idade do sucesso!"
+
+Ex03. Faça um programa que peça 2 numeros e mostre o produto (multiplicação).
+
+Ex04. Faça um programa que peça 3 notas e mostre a média das notas.
