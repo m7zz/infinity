@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Numeros</h1>
+
+    <div>
+        <input type="text" id="numero" placeholder="Digite um numero" /> 
+        <button onclick="handleAdicionarNumero()"> Adicionar</button>
+    </div>
+
+    <ul id="numeros"></ul>
+
+    <script>
+      const numeros = [];
+
+      function handleAdicionarNumero(){
+        const numero = Number(document.getElementById('numero').value);
+        numeros.push(numero)
+        handleMostrarNumeros();
+        
+    }
+      function handleMostrarNumeros(){
+        //1. Buscar a listar no HTML
+       const ulNumeros = document.getElementById("numeros");
+       
+       //2. Limpando ulNumeros
+       ulNumeros.innerHTML ="";
+
+       //3. Percorrer o array de numeros, e para cada numero, adicionar um <li>
+
+        numeros.forEach((numero) => {
+            ulNumeros.innerHTML += `<li>${numero}</li>`
+        });
+      }
+
+      handleMostrarNumeros();
+    </script>
+  </body>
+</html>
