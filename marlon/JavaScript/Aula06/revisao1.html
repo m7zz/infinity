@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revisao Funcao</title>
+  </head>
+  <body>
+    <script>
+      //Revisão Funções
+
+      // Peso e altura sao parametros;
+      //O retorno é o valor do IMC
+      function calcularImc(peso, altura){
+        return peso / (altura * altura);
+      }
+
+      // Entrada
+      const peso = Number(prompt("Digite seu peso: "));
+      const altura = Number(prompt("Digite sua altura: "));
+
+      // Processamento
+      const imc = calcularImc(peso, altura) // Chamando a função
+      // Saida
+
+      
+
+      let categoria;
+      if (imc <= 18) {
+        categoria = "Abaixo do peso";
+      } else if (imc <= 25) {
+        categoria = "Peso ideal";
+      } else if (imc <= 30) {
+        categoria = "Sobrepeso";
+      } else if (imc <= 35) {
+        categoria = "Obesidade I";
+      } else if (imc <= 40) {
+        categoria = "Obesidade II";
+      } else {
+        categoria = "Obesidade III";
+      }
+    
+      alert(`O seu IMC é ${imc.toFixed(2)}`);
+      alert(`Sua classificação é ${categoria}`)
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <style>
+        body{
+            background-color: #3a3a3a;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+
+    <div>
+      <div>
+        <label for="numero1"> Numero 1: </label>
+        <input type="text" id="numero1" />
+      </div>
+      <div>
+        <label for="numero2"> Numero 2: </label>
+        <input type="text" id="numero2" />
+      </div>
+      <br />
+      <button onclick="handleMultiplcar()">Multiplicar</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+      function multiplicar(n1, n2) {
+        return n1 * n2;
+      }
+
+      function handleMultiplcar() {
+        // Entrada
+        const num1 = Number(document.getElementById("numero1").value);
+        const num2 = Number(document.getElementById("numero2").value);
+
+        // Processamento
+        const resultado = multiplicar(num1, num2);
+        console.log(resultado)
+
+        // Saída
+        const paragrafoResultado = document.getElementById("resultado");
+        paragrafoResultado.innerText = `${num1} x ${num2} = ${resultado}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 003</title>
+  </head>
+  <body>
+
+    <script>
+      let nota1 = Number(prompt('Digite a 1º nota'));
+      let nota2 = Number(prompt('Digite a 2º nota'));
+      
+      const media = (nota1 + nota2) / 2;
+      
+      alert(`A média das notas é ${media.toFixed(2)}`);
+
+      if (media >= 6) {
+          alert('APROVADO');
+      } else if (media >= 4 && media < 6) {
+          alert('RECUPERAÇÃO');
+      } else {
+          alert('REPROVADO');
+      }
+    </script>
+
+  </body>
+</html>

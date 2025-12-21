@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 004</title>
+  </head>
+  <body>
+    <script>
+      let idade = Number(prompt("Digite sua idade: "));
+
+      if (idade < 16) {
+        alert("NAO PODE VOTAR.");
+      } else if (idade >= 16 && idade <= 17) {
+        alert("VOTO FACULTATIVO");
+      } else if (idade >= 18 && idade < 65) {
+        alert("VOTO OBRIGATORIO");
+      } else {
+        alert("VOTO FACULTATIVO");
+      }
+    </script>
+  </body>
+</html>

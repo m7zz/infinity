@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media dos alunos</title>
+
+    <style>
+        body {
+            background-color: #3a3a3a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #ff7f50; /* Laranja vibrante */
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px; /* Bordas arredondadas */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6347; /* Cor um pouco mais escura ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o botão um pouco */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            background-color: #ff4500; /* Cor ao clicar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Media dos alunos</h1>
+
+    <div>
+      <div>
+        <label for="numero1">Nota 1:</label>
+        <input type="text" id="numero1" />
+      </div>
+      <div>
+        <label for="numero2">Nota 2:</label>
+        <input type="text" id="numero2" />
+      </div>
+      <div>
+        <label for="numero3">Nota 3:</label>
+        <input type="text" id="numero3" />
+      </div>
+      <br />
+      <button onclick="handleMultiplcar()">Calcular Média</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+      function calcMedia(n1, n2, n3) {
+        return (n1 + n2 + n3) / 3;
+      }
+
+      function handleMultiplcar() {
+        // Entrada
+        const num1 = Number(document.getElementById("numero1").value);
+        const num2 = Number(document.getElementById("numero2").value);
+        const num3 = Number(document.getElementById("numero3").value);
+
+        // Processamento
+        const resultado = calcMedia(num1, num2, num3);
+        console.log(resultado)
+
+        // Saída
+        const paragrafoResultado = document.getElementById("resultado");
+        paragrafoResultado.innerText = `A média das notas é = ${resultado.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Ex01. Faça um programa que peça 2 numeros e mostre
+ o produto (multiplicação).
+
+
+Ex02. Faça um programa que peça 3 notas e mostre a média das notas.

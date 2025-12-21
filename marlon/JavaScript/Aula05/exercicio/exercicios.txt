@@ -1,0 +1,13 @@
+Ex01. Faça uma função que receba 2 parametros
+
+- nome (obrigatório)
+- sobrenome (opcional, e se não for informado considere uma string vazia (''))
+
+Você deve mostrar uma mensagem "Olá <nome> <sobrenome>" em um alert.
+
+
+Ex02. Faça uma função multiplicar que receba 2 numeros e retorne o produto
+entre eles.
+
+Ex03. Faça uma funcao calcular_media que recebe 3 notas e retorne a media 
+entre as notas.

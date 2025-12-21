@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada cinema</title>
+</head>
+<body>
+    <script> 
+        const faixaEtaria = 18
+        const idade = Number(prompt('Digite a sua idade: '))
+
+        if (idade >= faixaEtaria) {
+            alert('Pode entrar para o filme.')
+        } else if (faixaEtaria == 18 && idade >= 16) {
+            alert('Pode entrar acompanhado para ver o filme.')
+        } else {
+            alert('Nao pode entrar.')
+        }
+        
+    </script>
+</body>
+</html>
