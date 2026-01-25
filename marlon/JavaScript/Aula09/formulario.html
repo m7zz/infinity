@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -43,30 +42,58 @@
       <button type="submit">Cadastrar</button>
     </form>
 
+    <p id="mensagem"></p>
+
     <script>
-        // Formulario de Produto
-        const produtoForm = document.getElementById('produto-form')
-        
-        // Atribuindo função "handle" para o atributo "onsubmit"
-        //-- produtoForm.onsubmit = () => {}
+      function mostrarMensagem(text, type) {
+        const pMensagem = document.getElementById("mensagem");
 
-        // Adicionando um "eventListener" para o evento de "submit"
-        produtoForm.addEventListener('submit', (event) => {
-            // Evitar o formulario de realizar o Comportamento Padrão
-            // ENviar os Dados pelo Action e Recarregar a Página
-            event.preventDefault()
+        pMensagem.innerText = text;
+        pMensagem.style.color = type == "sucess" ? "green" : "red";
+        pMensagem.style.fontWeight = "bold";
+      }
 
-            // <form>.<inputId> -> Busca o Input do Formulário
-            // <form>.<inputId>.value -> Busca o valor do Input do Formulário    
-            const produto = {
-                nome: produtoForm.nome.value,
-                preco: Number(produtoForm.preco.value),
-                categoria: produtoForm.categoria.value
-            }
-            console.log(produto)
-        })
+      // Formulario de Produto
+      const produtoForm = document.getElementById("produto-form");
 
-        
+      // Atribuindo função "handle" para o atributo "onsubmit"
+      //-- produtoForm.onsubmit = () => {}
+
+      // Adicionando um "eventListener" para o evento de "submit"
+      produtoForm.addEventListener("submit", (event) => {
+        // Evitar o formulario de realizar o Comportamento Padrão
+        // ENviar os Dados pelo Action e Recarregar a Página
+        event.preventDefault();
+
+        // <form>.<inputId> -> Busca o Input do Formulário
+        // <form>.<inputId>.value -> Busca o valor do Input do Formulário
+        const produto = {
+          nome: produtoForm.nome.value.trim(),
+          preco: Number(produtoForm.preco.value),
+          categoria: produtoForm.categoria.value,
+        };
+
+        // Validar o form
+
+        if (produto.nome === "") {
+          mostrarMensagem("O campo nome é obrigatório", "error");
+          return;
+        }
+
+        if (produto.preco === "") {
+          mostrarMensagem("O campo preco é obrigatório", "error");
+          return;
+        }
+
+        produto.preco = Number(produto.preco);
+
+        if (produto.preco <= 0) {
+          mostrarMensagem("O campo preco é obrigatório", "error");
+          return;
+        }
+
+        console.log(produto);
+      });
     </script>
   </body>
 </html>
