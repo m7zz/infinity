@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="./public/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <h1>Gestão de Produtos</h1>
+
+    <form id="produto-form">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" />
+      </div>
+
+      <div>
+        <label for="preco">Preço</label>
+        <input type="number" step="0.01" id="preco" name="preco" />
+      </div>
+
+      <div>
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria">
+          <option value="">Sem Categoria</option>
+          <option value="Eletronico">Eletrônico</option>
+          <option value="Textil">Têxtil</option>
+          <option value="Limpeza">Limpeza</option>
+        </select>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <hr />
+
+    <h2>Produtos</h2>
+
+    <table id="produtos-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Categoria</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Toastify -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <!-- Script do Controller -->
+    <script type="module" src="./public/js/produto.controller.js"></script>
+    
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
